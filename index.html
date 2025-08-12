@@ -164,6 +164,16 @@
                     alert("Please Enter The Details First")
                     return
                 }
+
+                if (studentMarksInput < 0) {
+                    alert("Negative Marks Not Allowed")
+                    return
+                }
+
+                if (studentMarksInput > fullMarksInput) {
+                    alert("Obtained Marks Can't be Greater Than Total Marks")
+                    return
+                }
                 studentDetails = {
                     studentId: Date.now(),
                     Name: inputStudentName,
